@@ -85,47 +85,88 @@ img{
     transition: opacity 0.3s;
 }
 
-
 .accordion-text.active{
     height: 100%;
     opacity: 1;
-    padding: 5px 0px;
+    padding: 10px 0px;
 }
 
 @media (max-width: 1025px) {
     .container {
         flex-direction: column;
+        height: 120vh;
     }
 
     .card {
         width: 80%;
-        padding: 20px;
+        padding: 10px;
+        height: 50%;
+        border-radius: 26px;
     }
 
     .image-position img {
         max-width: 80%;
         position: relative;
-        top: 100px;
+        top: -50px;
         left: 120px;
     }
 
     .accordion-panel {
         width: 100%;
+        padding: 20px;
     }
 
     .accordion-panel h2 {
+        align-self: center;
         font-size: 3rem;
     }
 
     .accordion-panel .accordion {
+        padding: 10px;
         width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 
     .accordion button {
         font-size: 2rem;
+        max-width: 100%;
+        text-align: left;
+        align-self: center;
     }
 
     .accordion-text {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
+        width: 100%;
+        max-width: 330px;
+    }
+
+    hr{
+        display: none;
+        height: 0;
+    }
+
+    .accordion-text.active{
+        padding: 5px 0;
+    }
+
+}
+
+@media (max-width: 445px){
+    .image-position img {
+        max-width: 50%;
+        top: -30px;
+    }
+
+    .card {
+        width: 80%;
+        padding: 10px;
+        height: 70%;
+        border-radius: 12px;
+    }
+    .container{
+        height: 130vh;
     }
 }
